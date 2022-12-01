@@ -1,0 +1,6 @@
+name: prananumaoku
+description: A heroku alternative powered by awesomeness and AWS
+runtime:
+    name: python
+    options:
+        virtualenv: venv

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login</title>
+</head>
+  <style>
+* {
+    margin:0;
+    padding:0;
+    font-family: 'MADE TOMMY', sans-serif;
+    text-decoration: none;
+    color:black;
+    list-style-type: none;
+}
+
+body {
+    background: url("https://www.zupimages.net/up/22/41/uvsf.jpg");
+    background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+    margin: 250px auto;
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+    background-color: rgb(196, 196, 196);
+}
+
+.shadow {
+    box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.5);
+    transform: translate(0%, -0%);
+}
+
+.container h2 {
+    text-align: center;
+    padding: 30px 0;
+    font-size: 2.5em;
+}
+
+.container form {
+    text-align: center;
+}
+
+.container form #usernameForm, .container form #passwordForm, .container form #submitForm {
+    width: 80%;
+    height: 30px;
+    margin: 20px;
+    border-radius: 0 10px 10px 0;
+    border:none;
+    outline:none;
+    background:none;
+}
+
+.container form #usernameForm, .container form #passwordForm {
+    padding: 10px;
+    border-left: 5px solid #333333;
+    background-color: #b1b1b1;
+}
+
+.container form #usernameForm:focus, .container form #passwordForm:focus {
+    padding: 10px;
+    border-left: 5px solid #333333;
+    border-bottom: 5px solid #333333;
+    border-radius: 0 10px 0 10px;
+    background-color: #949494;
+    transition: border 0.2s;
+}
+
+.container form #submitForm {
+    height: 50px;
+    background-color: #969696;
+    border-radius: 10px;
+}
+
+.container form #submitForm:hover {
+    height: 50px;
+    background-color: #7c7c7c;
+    cursor: pointer;
+}
+
+.container form span {
+    color: rgb(85, 85, 85);
+}
+
+.container .links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .links li {
+    margin: 10px 20px 30px 20px;
+    font-size: 1.5em;
+}
+
+.instagram {
+    color: #d33778;
+}.github {
+    color: #171515;
+}
+
+.instagram:hover {
+    color: #8b2550;
+}.github:hover {
+    color: #413c3c;
+}
+  </style>
+<body>
+
+    <div class="container shadow">
+        <h2>Log In</h2>
+        <form action="/home">
+            <input type="text" name="username" id="usernameForm" required>
+            <input type="password" name="password" id="passwordForm" required>
+            <span>Don't have an account? <a href="#">Sign up now!</a></span>
+            <input type="submit" name="submit" id="submitForm">
+        </form>
+        
+        <ul class="links">
+            <li><a href="https://github.com/Tazoukaaa"><i class="github fa-brands fa-github"></i></a></li>
+            <li><a href="https://instagram.com/xerwanv"><i class="instagram fa-brands fa-instagram"></i></a></li>
+        </ul>
+    </div>
+  <script>
+let balls = document.getElementsByClassName("shadow");
+
+document.onmousemove = function () {
+
+    let x = event.clientX * 5 / window.innerWidth + "%";
+    let y = event.clientY * 5 / window.innerHeight + "%";
+
+
+    for (let i = 0; i < 2; i++) {
+        balls[i].style.left = x;
+        balls[i].style.top = y;
+        balls[i].style.transform = "translate(-" + x + ",-" + y + ")";
+    }
+
+    console.log("x =" + x);
+    console.log("y = " + y);
+}
+  </script>
+</body>
+</html>
